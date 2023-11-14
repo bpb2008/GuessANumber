@@ -12,18 +12,21 @@ body {
   width: 500px;
   border-radius: 16px;
   display: flex;
-  flex-directon: column;
+  flex-direction: column;
   color: cadetblue;
 }
 
-.head {
+.header {
+  width: 500px; 
   font-weight: 600;
   font-size: 20px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 
 input {
   padding: 10px;
+  width: 400px; 
+  height: 10px;
   border: 1px solid cadetblue;
   border-radius: 10px;
 }
@@ -34,7 +37,7 @@ input:hover {
 
 input:focus {
   border: 0px;
-  background-color: azure;
+  background-color: #ffffff;
 }
 
 h3 {

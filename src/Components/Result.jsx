@@ -1,5 +1,3 @@
-import React from "react";
-
 const Result = ({ userNum, computerNum }) => {
   let result;
   if (userNum) {
@@ -7,7 +5,7 @@ const Result = ({ userNum, computerNum }) => {
       result = "Your guess is too low!";
     } else if (computerNum < userNum) {
       result = "Your guess is too high";
-    } else if (computerNum == userNum) {
+    } else if (computerNum === userNum) {
       result = "Yay! You guessed correctly!";
     } else {
       result = "Enter valid input";
