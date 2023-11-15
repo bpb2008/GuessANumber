@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Result from "./Components/Result";
 import "./App.css";
 
 const App = () => {
-  const randomNum = Math.floor(Math.random() * 100) + 1;
-  const [userNum, setUserNum] = useState("");
+  const [userNum, setUserNum] = useState(0);
+
+  const handleOnChange = (e) => {
+    const parsedInput = Number(e.target.value);
+
+    if (isNaN(parsedInput)) {
+      setUserNum(-1);
+    } else {
+      setUserNum(parsedInput);
+    }
+  };
 
   return (
     <div className="container">
@@ -15,10 +24,9 @@ const App = () => {
         id="userNum"
         type="text"
         name="userNum"
-        value={userNum}
-        onChange={(e) => setUserNum(e.target.value)}
+        onChange={handleOnChange}
       />
-      <Result userNum={userNum} computerNum={randomNum} />
+      <Result userNum={userNum} />
     </div>
   );
 };
